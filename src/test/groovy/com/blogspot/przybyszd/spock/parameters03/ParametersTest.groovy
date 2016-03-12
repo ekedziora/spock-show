@@ -49,34 +49,6 @@ class ParametersTest extends Specification {
             "Kowalski" | "Jan"     | 24
     }
 
-    @Unroll("should set person with #lastName, #firstName and #age")
-    def "should set person with lastName, firstName and age"() {
-        when:
-            Person person = new Person(lastName: lastName, firstName: firstName, age: age)
-        then:
-            person.firstName == firstName
-            person.lastName == lastName
-            person.age == age
-        where:
-            lastName   | firstName | age
-            "Smith"    | "John"    | 25
-            "Kowalski" | "Jan"     | 24
-    }
-
-    @Unroll("should set person with #lastName.length(), #firstName.toUpperCase() and #age")
-    def "should set person with lastName, firstName and age 2"() {
-        when:
-            Person person = new Person(lastName: lastName, firstName: firstName, age: age)
-        then:
-            person.firstName == firstName
-            person.lastName == lastName
-            person.age == age
-        where:
-            lastName   | firstName | age
-            "Smith"    | "John"    | 25
-            "Kowalski" | "Jan"     | 24
-    }
-
     @Unroll("should set person with #lastName.length(), #firstName.toUpperCase() and #age when last name starts with #firstLetter")
     def "should set person with lastName, firstName and age 3"() {
         when:
