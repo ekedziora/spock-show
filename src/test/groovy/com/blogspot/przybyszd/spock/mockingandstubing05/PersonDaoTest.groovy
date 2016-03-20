@@ -137,6 +137,8 @@ class PersonDaoTest extends Specification {
             sut.findByLastName("Kowalski") == [new Person("Jan", "Kowalski", 20)]
     }
 
+    // STUBS
+
     def "should find one person with stub"() {
         given:
             jdbcTemplate = Stub(JdbcTemplate)
